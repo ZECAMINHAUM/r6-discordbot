@@ -1,7 +1,10 @@
 const Discord = require('discord.js');
 const config = require('./config.json');
-const fs = require('fs');
 const jimp = require('./src/jimp');
+const rainbowsix = require('./src/rainbowsix');
+const fs = require('fs');
+
+
 
 const client =  new Discord.Client();
 
@@ -26,13 +29,25 @@ client.on('guildMemberAvailable', guild => {
 client.on('message', async msg => {
     if(msg.author.bot) return;
     
-    const args = msg.content.slice(config.prefix.length).trim().split(/ +/g).toString();
-    const command = args;
-    console.log(command);
+    const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    console.log(args);
     if(command === 'ping'){
         const m = await msg.channel.send('Ping?');
         msg.reply(`PONG! A latencia é ${m.createdTimestamp - msg.createdTimestamp}ms.
                 \n A Latencia do Bot é de ${Math.round(client.ping)}ms`);
+    }
+    if(command === 'teste'){
+        const json = { 
+            "teste": "teste"
+        }
+        console.log(json);
+        msg.channel.send(json);
+    }
+    if(command === 'chama'){
+        const username = args[0];
+        rainbowsix.getUserByName(username, msg);
+
     }
     if(command === 'fluxo'){
         jimp.hello(msg.author);
