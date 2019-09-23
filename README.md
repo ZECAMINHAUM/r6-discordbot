@@ -1,10 +1,10 @@
 ### Rainbow Six DiscordBot
 
-A Discord-Bot that i create for improve knowledge with nodejs and Automate searches in [R6 tab](https://r6tab.com/).
+A Discord-Bot that I create for improve knowledge with nodejs and Automate searches in [R6 tab](https://r6tab.com/).
 
 ---
 
-First Things First ( I probably say this in all my docs ), so lets begin!
+First Things First ( I probably will say this in all my docs ), so lets begin!
 
 
 #### Instalation
