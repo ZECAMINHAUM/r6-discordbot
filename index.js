@@ -2,9 +2,6 @@ const Discord = require('discord.js');
 const config = require('./config.json');
 const jimp = require('./src/jimp');
 const rainbowsix = require('./src/rainbowsix');
-const fs = require('fs');
-
-
 
 const client = new Discord.Client();
 
@@ -51,6 +48,5 @@ client.on('message', async msg => {
     }
 
 });
-
 
 client.login(config.token);
