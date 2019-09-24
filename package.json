@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "build": ""
+    "start": "node index.js"
   },
   "author": "Lucas Silva Almeida (Banco_Itau_BBA)",
   "license": "ISC",
